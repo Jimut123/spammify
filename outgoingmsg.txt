@@ -1,0 +1,54 @@
+Subject: spam xD
+From: dragonjimut008@gmail.com
+To: paljimutbahan@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8797865693400223417=="
+
+--===============8797865693400223417==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+	Rse!
+	Cela ressemble à un excellent recipie[1] déjeuner.
+	[1] http://www.yummly.com/recipe/Roasted-Asparagus-Epicurious-203718
+	--Pepé
+	
+
+--===============8797865693400223417==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+	<html>
+	  <title> This is the title</title>
+	  <head> Some head in this place</head>
+	  <body>
+
+	  <h1> 
+	  		Header of the mail
+	  </h1>
+
+	  <b> 
+	  		This is bold!
+	  </b>
+	  <i> 
+	  	This is italics
+	  </i>
+	  <u> 
+	  	This is underline 
+	  </u>
+	   <p>
+	   Salut!
+	   </p>
+	    <p>Follow on github!
+	        <a href="https://github.com/Jimut123">
+	            recipie
+	        </a> 
+	    </p>
+	    
+	  </body>
+	</html>
+	
+
+--===============8797865693400223417==--
