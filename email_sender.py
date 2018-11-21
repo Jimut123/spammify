@@ -132,7 +132,9 @@ if __name__=='__main__':
     obj = mail_sender       # creating the object of the email sender class
     sub = input(Fore.GREEN+"Enter the subject of the email :  ")
     global username,password
-    
+    username = input(Fore.RED+"Enter the email address (username) of sender :  ")
+    str1 = Fore.RED+"Enter the password of ",username," : "
+    password = input(str1)
     start_time = obj.get_timestap()
     print(Fore.GREEN+" START TIME :: ",start_time)
     num_sent = 0

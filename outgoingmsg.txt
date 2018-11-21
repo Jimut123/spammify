@@ -1,11 +1,11 @@
-Subject: spam xD
+Subject: spam
 From: dragonjimut008@gmail.com
-To: paljimutbahan@gmail.com
+To: jimutbahanpal@yahoo.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============8797865693400223417=="
+ boundary="===============5944519527009391731=="
 
---===============8797865693400223417==
+--===============5944519527009391731==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -15,7 +15,7 @@ Content-Transfer-Encoding: 8bit
 	--Pepé
 	
 
---===============8797865693400223417==
+--===============5944519527009391731==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 MIME-Version: 1.0
@@ -51,4 +51,4 @@ MIME-Version: 1.0
 	</html>
 	
 
---===============8797865693400223417==--
+--===============5944519527009391731==--
