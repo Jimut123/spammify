@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS MAIL (
 ''')
 
 # sender details
-username="dragonjimut008@gmail.com"		# write the username here
-password="Hackingis110%easier"			# write the password here
+#username    # write the username here
+#password			# write the password here
 
 # paljimutbahan@gmail.com
 
@@ -131,6 +131,8 @@ if __name__=='__main__':
     recv_name = input(Fore.GREEN+"Enter the receiver's address :  ")
     obj = mail_sender       # creating the object of the email sender class
     sub = input(Fore.GREEN+"Enter the subject of the email :  ")
+    global username,password
+    
     start_time = obj.get_timestap()
     print(Fore.GREEN+" START TIME :: ",start_time)
     num_sent = 0
