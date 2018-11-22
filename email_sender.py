@@ -21,6 +21,7 @@ from email.message import EmailMessage
 from email.headerregistry import Address
 from email.utils import make_msgid
 
+import getpass                          # for password
 
 conn = sqlite3.connect('spam_email.sqlite')
 cur = conn.cursor()
@@ -88,25 +89,26 @@ class mail_sender():
     def get_timestap():
         return datetime.now().isoformat(timespec='seconds')
 
-    def sendmail(senderName, 								# Name of the sender
+    def sendmail(senderName, 							    	# Name of the sender
                     recvName,									# Name of the recipient here
                     subject, 	 								# Give the subject here
                     template, 									# Send the template here
                     content,									# normal text
-                    img_flag=False,						  	# By default image flag is set to false
+                    img_flag=False,						  	    # By default image flag is set to false
                     img_name="",								# add image name here
-                    bckupmsgfilename="outgoingmsg.txt" 		# add the name of the backup msg here
+                    bckupmsgfilename="outgoingmsg.txt" 		    # add the name of the backup msg here
                 ):					
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         global username, password
-        server.login(username, password)	# load the server
+        server.login(username, password)	                    # load the server
         message = EmailMessage()
         asparagus_cid = make_msgid()
         message['Subject'] = subject
         message['From'] = senderName
         message['To'] = recvName
         #setting the contents here, just the mail here
+        
         message.set_content(content)
         #Adding the template here and formatting to html
         message.add_alternative(template.format(asparagus_cid=asparagus_cid[1:-1]), subtype='html')
@@ -129,18 +131,18 @@ if __name__=='__main__':
     number_mails = int(input(Fore.BLUE+"Enter the number of mails you want to send  [LIMIT is 10,000 for Google (gmail) SMTP] :  "))
     print(Fore.BLUE+"SENDING ",Fore.RED+str(number_mails),Fore.BLUE+" one by one ... ")
     recv_name = input(Fore.GREEN+"Enter the receiver's address :  ")
-    obj = mail_sender       # creating the object of the email sender class
+    obj = mail_sender                                               # creating the object of the email sender class
     sub = input(Fore.GREEN+"Enter the subject of the email :  ")
     global username,password
     username = input(Fore.RED+"Enter the email address (username) of sender :  ")
     str1 = Fore.RED+"Enter the password of ",username," : "
-    password = input(str1)
+    password = getpass.getpass(str1)
     start_time = obj.get_timestap()
     print(Fore.GREEN+" START TIME :: ",start_time)
     num_sent = 0
     for i in range(number_mails):
 
-        if i%5==0:              # commiting after sending 5 emails sucessfully! 
+        if i%5==0:                                                   # commiting after sending 5 emails sucessfully! 
             conn.commit()       
         
         try:
@@ -150,7 +152,7 @@ if __name__=='__main__':
                 sub,
                 obj.template,
                 obj.content,
-                False,                  # set : True for sending image
+                False,                                                # set : True for sending image
                 "roasted-asparagus.jpg",
                 "outgoingmsg.txt")
             end_time = obj.get_timestap()
