@@ -1,4 +1,4 @@
-# SPAMMIFY
+# SPAMMIFY [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 This is a spam email sender CLI. Please note, I'm not responsible for the consequences of this software. Use at your own risk.
 Don't spam until you need to.
